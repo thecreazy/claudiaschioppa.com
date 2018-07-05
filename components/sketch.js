@@ -9,7 +9,7 @@ export default class Sketch extends Component{
     clickDrag = []
     componentDidMount(){
         this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
+        this.canvas.height = window.innerHeight / 1.5;
         this.getCanvas()
     }
     getCanvas(){
@@ -77,7 +77,6 @@ export default class Sketch extends Component{
             .sketch{
                 position:absolute;
                 left:0;
-                top:0;
                 cursor: pointer;
             }`}
             </style>

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Head from '../components/head'
 import Serie from '../components/serie'
 import Sketch from '../components/sketch'
@@ -68,12 +67,14 @@ background-color: #fff;
     <style jsx global>
     {`
     body{
-      border: 7px solid #bc994e;
+      border: 25px solid #000000;
+      border-top: 0px;
+      border-width: 0 25px;
+      border-image: url(https://res.cloudinary.com/dgv71mms7/image/upload/v1530824014/border.png) 0 30 round;1
       padding: 0px;
       margin: 0px;
       min-height: 99vh;
       font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
-  }
     }
     `}
     </style>
