@@ -77,6 +77,7 @@ export default class Sketch extends Component{
             .sketch{
                 position:absolute;
                 left:0;
+                top:0;
                 cursor: pointer;
             }`}
             </style>

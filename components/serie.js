@@ -37,10 +37,10 @@ class Serie extends Component{
               <img className="serie__image" src="https://picsum.photos/350/500" />
           </div>
           <div  className="serie__secondary">
-          <div className="animate" data-background={color}>
+          <div className="animate serie__image" data-background={color}>
               <img className="serie__image --left" src="https://picsum.photos/400/300" />
           </div>
-          <div className="animate" data-background={color}>
+          <div className="animate serie__image" data-background={color}>
               <img className="serie__image --left" src="https://picsum.photos/300/500" />
               </div>
            </div>

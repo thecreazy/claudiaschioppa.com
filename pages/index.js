@@ -38,6 +38,7 @@ My main focus nowadays is emotional design, web animation, and accessibility.
       }
       .title, .description {
         text-align: left;
+        pointer-events: none;
       }
       .hero .description {
         font-weight: 600;
@@ -70,8 +71,8 @@ background-color: #fff;
       border: 25px solid #000000;
       border-top: 0px;
       border-width: 0 25px;
-      border-image: url(https://res.cloudinary.com/dgv71mms7/image/upload/v1530824014/border.png) 0 30 round;1
-      padding: 0px;
+      border-image: url(https://res.cloudinary.com/dgv71mms7/image/upload/v1530825657/border.png) 30 round;
+      padding: 20px;
       margin: 0px;
       min-height: 99vh;
       font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
