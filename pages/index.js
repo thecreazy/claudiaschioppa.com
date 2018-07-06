@@ -63,10 +63,7 @@ My main focus nowadays is emotional design, web animation, and accessibility.
       }
       .hero .contact:hover{
         color: #000;
-
-background-color: #fff;
-
-
+        background-color: #fff;
       }
     `}</style>
     <style jsx global>

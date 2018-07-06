@@ -4,6 +4,9 @@ import Head from '../components/head'
 import Transition from '../components/transition'
 
 export default class Serie extends Component{
+    static getInitialProps ({query, slug}) {
+        return {query, slug}
+    }
     constructor(props){
         super(props)
         this.state = {
@@ -16,10 +19,10 @@ export default class Serie extends Component{
     }
     render(){
         const {transition} = this.state
-        console.log(transition)
+        const {query} = this.props
        return <div>
        <Head title="Serie" />
-       <Transition status={transition} color={'#ce4841'}/>
+       <Transition status={transition} color={`#${query.color}`}/>
    
        <style jsx>{`
          }

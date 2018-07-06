@@ -20,7 +20,8 @@ class Serie extends Component{
         this.setState({
             transition: 'open'
         }, ()=>{
-            setTimeout(()=>  Router.push(`${BASE_SLUG}${this.props.slug}`), 300)
+            const {slug, color} = this.props
+            setTimeout(()=>  Router.push(`${BASE_SLUG}${slug}?color=${color.slice(1,7)}`), 300)
            
         })
     }
