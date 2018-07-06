@@ -1,3 +1,5 @@
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 import Head from '../components/head'
 import Serie from '../components/serie'
 import Sketch from '../components/sketch'
@@ -18,9 +20,11 @@ My main focus nowadays is emotional design, web animation, and accessibility.
       <p>And don’t forget to stalk me on:</p>
       <a className="contact" href="mailto:juan.dinella@gmail.com">Contact me</a>
     </div>
-    <Serie color="#ce4841" title="ciao" slug="ciao" />
-    <Serie color="#9e2412" title="ciao" slug="ciao2" />
-    <Serie color="#412234" title="ciao" slug="ciao2" />
+    <ParallaxProvider>
+      <Serie color="#ce4841" title="ciao" slug="ciao" />
+      <Serie color="#9e2412" title="ciao" slug="ciao2" />
+      <Serie color="#412234" title="ciao" slug="ciao2" />
+    </ParallaxProvider>
     
 
     <style jsx>{`

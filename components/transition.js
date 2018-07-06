@@ -18,9 +18,12 @@ export default ({status, color}) => (
     }
     .transition.open{
       transform: scale(1.5) translateZ(0) translateY(-10%) translateX(-10%);
-      transition: transform .3s linear;
+      transition: transform .3s, width .3s, height .3s linear;
       z-index: 99;
       opacity: 1;
+    }
+    .transition.close{
+        height: 0;
     }
     `}
     </style>

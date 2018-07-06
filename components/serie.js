@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
+import { Parallax } from 'react-scroll-parallax';
 
 import { string } from 'prop-types'
 import Router from 'next/router'
-import Link from 'next/link'
 
 import Transition from './transition'
 
+const BASE_SLUG = '/serie/'
 
 class Serie extends Component{
     constructor(props){
@@ -19,31 +20,38 @@ class Serie extends Component{
         this.setState({
             transition: 'open'
         }, ()=>{
-            setTimeout(()=>  Router.push(`/serie/${this.props.slug}`), 300)
+            setTimeout(()=>  Router.push(`${BASE_SLUG}${this.props.slug}`), 300)
            
         })
+    }
+    componentDidMount(){
+        Router.prefetch(`${BASE_SLUG}${this.props.slug}`)
     }
     render(){
         const {color, title, slug} = this.props
         const {transition} = this.state
-        return <div prefetch  onClick={this.onClick}>
+        return <div  onClick={this.onClick}>
         <section className="serie">
           <Transition color={color} status={transition} />
           <h3 className="serie__name" style={{
             color: `${color}`
           }}>{title}</h3>
           <div className="serie__images">
-          <div className="serie__primary">
-              <img className="serie__image" src="https://picsum.photos/350/500" />
-          </div>
+          <Parallax offsetYMax={35} offsetYMin={-35}>
+            <div className="serie__primary">
+                <img className="serie__image" src="https://picsum.photos/350/500" />
+            </div>
+          </Parallax>
+          <Parallax offsetYMax={75} offsetYMin={-75}>
           <div  className="serie__secondary">
-          <div className="animate serie__image" data-background={color}>
-              <img className="serie__image --left" src="https://picsum.photos/400/300" />
-          </div>
+            <div className="animate serie__image" data-background={color}>
+                <img className="serie__image --left" src="https://picsum.photos/400/300" />
+            </div>
           <div className="animate serie__image" data-background={color}>
               <img className="serie__image --left" src="https://picsum.photos/300/500" />
-              </div>
+            </div>
            </div>
+           </Parallax>
            </div>
             <style jsx>
             {`
@@ -82,7 +90,7 @@ class Serie extends Component{
                   display: flex;
                   height: 100%;
                   justify-content: center;
-                  width:50%;
+                  width:100%;
               }
               .serie .serie__primary{
                   justify-content: left;
