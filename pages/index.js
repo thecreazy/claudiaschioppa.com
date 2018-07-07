@@ -1,29 +1,26 @@
-import { ParallaxProvider } from 'react-scroll-parallax';
+require('es6-promise').polyfill()
+require('isomorphic-fetch')
+
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 import Head from '../components/head'
 import Serie from '../components/serie'
 import Sketch from '../components/sketch'
 
-export default () => (
+import strings from '../locales/en.json'
+
+const Index = ({series}) => (
   <div>
     <Head title="Home" />
     <Sketch />
     <div className="hero">
-      <h1 className="title">Hi, I’m Claudia</h1>
-      <h2 className="description">
-      I’m a 27-year-old Argentinian-Italian web designer and frontend developer living in Buenos Aires and looking forward to moving to Europe or USA. I’m a really curious person, and in spite of having a university degree, I consider myself a self-taught person constantly learning and always looking for new things to improve.
-
-Besides my passion for design and coding, I love and spend a lot of time travelling and taking photos. Feel free to visit my Unsplash page.
-
-My main focus nowadays is emotional design, web animation, and accessibility.
-      </h2>
-      <p>And don’t forget to stalk me on:</p>
-      <a className="contact" href="mailto:juan.dinella@gmail.com">Contact me</a>
+      <h1 className="title">{strings.title}</h1>
+      <h2 className="description">{strings.description}</h2>
+      <p>{strings.contact} </p>
+      <a className="contact" href={strings.cta}>{strings.ctalabel}</a>
     </div>
     <ParallaxProvider>
-      <Serie color="#ce4841" title="ciao" slug="ciao" />
-      <Serie color="#9e2412" title="ciao" slug="ciao2" />
-      <Serie color="#412234" title="ciao" slug="ciao2" />
+      {series.map(serie => <Serie color="#ce4841" title="ciao" slug="ciao" />)}
     </ParallaxProvider>
     
 
@@ -82,3 +79,11 @@ My main focus nowadays is emotional design, web animation, and accessibility.
     </style>
   </div>
 )
+
+Index.getInitialProps = async ({ req }) => {
+  const res = await fetch('https://cms.claudiaschioppa.com/api/series/')
+  const json = await res.json()
+  return { series: json }
+}
+
+export default Index
