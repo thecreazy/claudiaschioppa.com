@@ -1,5 +1,5 @@
-const nextRoutes = require('next-routes')
-const routes = module.exports = nextRoutes()
+const nextRoutes = require("next-routes");
+const routes = (module.exports = nextRoutes());
 
-routes.add('index', '/')
-routes.add('serie', '/serie/:slug')
+routes.add("index", "/");
+routes.add("serie", "/serie/:slug");
