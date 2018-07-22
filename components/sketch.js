@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-import { string } from "prop-types";
 
 export default class Sketch extends Component {
   paint = false;
@@ -78,16 +77,6 @@ export default class Sketch extends Component {
           onMouseUp={this.onMouseUp}
           onMouseLeave={this.onMouseLeave}
         />
-        <style jsx>
-          {`
-            .sketch {
-              position: absolute;
-              left: 0;
-              top: 0;
-              cursor: pointer;
-            }
-          `}
-        </style>
       </Fragment>
     );
   }

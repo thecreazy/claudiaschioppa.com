@@ -1,0 +1,38 @@
+.hero {
+    max-width: 44.125rem;
+    padding: 0 1.875rem;
+    margin-left: auto;
+    margin-right: auto;
+    .title,
+    .description {
+        text-align: left;
+        pointer-events: none;
+    }
+    .title {
+        font-weight: 800;
+        letter-spacing: 0.25rem;
+        font-size: 6.25rem;
+        color: $secondary;
+    }
+    .description {
+        font-weight: 600;
+        line-height: 1.6;
+        font-size: 1.125rem;
+        margin-bottom: 1.75rem;
+    }
+    .contact {
+        font-size: 1.125rem;
+        display: table;
+        margin-top: 1.875rem;
+        padding: 0.75rem 4.375rem;
+        transition: all 0.225s ease;
+        text-decoration: none;
+        color: $white;
+        border: 0.125rem solid $primary;
+        background-color:  $primary;
+        &:hover {
+            color: $primary;
+            background-color: $white;
+        }
+    }
+}

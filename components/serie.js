@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Parallax } from "react-scroll-parallax";
 
-import { string } from "prop-types";
+import { string, array } from "prop-types";
 import Router from "next/router";
 
 import Transition from "./transition";
@@ -83,85 +83,6 @@ class Serie extends Component {
               </div>
             </Parallax>
           </div>
-          <style jsx>
-            {`
-              .serie{
-                  min-height: 120px;
-                  margin: 0px;
-                  margin-top: 20px;
-                  padding: 0 15px;
-                  display:flex;
-                  flex-direction: column;
-                  cursor: pointer;
-                  position: relative;
-              }
-              .serie .serie__name{
-                  margin: 0px
-                  margin-top: 20px;
-                  font-size: 1.5rem;
-                  font-weight: bold;
-                  margin-bottom: 0.5em;
-                  text-align: center;
-                  font-size: 5rem;
-                  margin-bottom: 1.25rem;
-                  text-transform: capitalize;
-              }
-              .serie .serie__images{
-                  width: 100%;
-                  display: flex;
-                  justify-content: space-evenly;
-                  flex-flow: row wrap;
-                  padding-top: 10px;
-                  height: 100%;
-                  flex-direction: row-reverse;
-                  align-items: center;
-              }
-              .serie .serie__primary, .serie .serie__secondary{
-                  display: flex;
-                  height: 100%;
-                  justify-content: center;
-                  width:100%;
-                  max-width: 400px;
-              }
-              .serie .serie__primary{
-                  justify-content: left;
-              }
-              .serie .serie__secondary{
-                  flex-direction: column;
-                  justify-content: right;
-              }
-              .serie .serie__secondary > div{
-                  display: flex;
-                  align-items: right;
-                  margin-bottom: 10px;
-              }
-              .animate{
-                  position: relative;
-              }
-              .animate:after{
-                  position: absolute;
-                  content: "";
-                  left: 0;
-                  top: 0;
-                  width: 100%;
-                  height: 100%;
-                  background: attr(data-background)
-              }
-              .serie .serie__image {
-                  margin: 5px;
-                  height: auto;
-                  transition: filter 1s;
-                  width: 100%;
-              }
-              .serie .serie__image:hover{
-                  filter: grayscale(100%)
-              }
-              .serie .serie__image.--left{
-                  margin-left: auto;
-              }
-              }
-            `}
-          </style>
         </section>
       </div>
     );
@@ -170,7 +91,7 @@ class Serie extends Component {
 
 Serie.propTypes = {
   color: string,
-  images: string,
+  images: array,
   title: string,
   slug: string
 };

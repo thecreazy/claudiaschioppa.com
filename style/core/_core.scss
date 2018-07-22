@@ -1,0 +1,10 @@
+body {
+    border: 25px solid $primary;
+    border-top: 0px;
+    border-width: 0 25px;
+    border-image: url($borderImage) 30 round;
+    padding: 20px;
+    margin: 0px;
+    min-height: 99vh;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
