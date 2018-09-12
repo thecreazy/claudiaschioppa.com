@@ -1,7 +1,7 @@
 import NextHead from "next/head";
 import { string } from "prop-types";
 
-const defaultDescription = "";
+const defaultDescription = "I’m an Italian Illustrator, in love by brush bristels, books, travelling!";
 const defaultOGURL = "";
 const defaultOGImage = "";
 

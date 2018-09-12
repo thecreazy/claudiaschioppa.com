@@ -12,6 +12,7 @@
     "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
     "next": "^6.0.3",
+    "next-fonts": "^0.10.0",
     "next-routes": "^1.4.2",
     "node-sass": "^4.9.2",
     "prettier": "^1.13.7",

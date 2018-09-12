@@ -18,6 +18,11 @@ const Index = ({ series }) => (
       <h2 className="description">{strings.description}</h2>
       <h3 className="description">I’m graduated in Painting to <a href="http://www.accademiabelleartiroma.it/intro.aspx" target="_blank">Academy of Fine Arts in Rome</a> and I recently attended the the <a href="https://www.idea-academy.it/illustration-360" target="_blank">Illustration 360’s Master class to Idea Academy</a>. For any question, proposal or simply to know us, please, mail me at: claudiaschioppa@gmail.com</h3>
       <p>You are Welcome! {strings.contact} </p>
+      <div className="social">
+        <a href="https://www.facebook.com/Claudia-Schioppa-Drawings-1541198826159073/" target="_blank"><i className="icon-facebook"/></a>
+        <a href="https://www.instagram.com/claudiaschioppa/?hl=it" target="_blank"><i className="icon-instagram"/></a>
+        {/* <a href="" target="_blank"><i className="icon-dribbble"/></a> */}
+      </div>
       <a className="contact" href={strings.cta}>
         {strings.ctalabel}
       </a>

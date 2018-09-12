@@ -8,6 +8,6 @@ module.exports = {
     return config;
   }
 };
-
+const withFonts = require('next-fonts')
 const withSass = require('@zeit/next-sass')
-module.exports = withSass()
+module.exports =  withFonts(withSass())

@@ -1,0 +1,19 @@
+.social{
+    margin-top: 20px;
+    a{
+        font-size: 23px;
+        text-transform: none;
+        text-decoration: none;
+        margin-right: 20px;
+        &:hover{
+            color: darken( $primary, 1% )
+        }
+    }
+    @media #{$small-and-down} {
+        margin-top: 40px;
+        a{
+            font-size: 30px;
+        }
+        
+    }
+}
