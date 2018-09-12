@@ -18,4 +18,7 @@
     &.close {
         height: 0;
     }
+    @media #{$small-and-down} {
+       display: none;
+    }
 }

@@ -7,6 +7,9 @@ body {
     margin: 0px;
     min-height: 99vh;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    @media #{$small-and-down} {
+        overflow-x: hidden;
+    }
 }
 
 a {

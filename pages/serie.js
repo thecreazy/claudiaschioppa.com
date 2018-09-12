@@ -16,7 +16,8 @@ export default class Serie extends Component {
     };
   }
   componentDidMount() {
-    setTimeout(() => this.setState({ transition: "open close" }), 300);
+    setTimeout(() => this.setState({ transition: "open close" }), 500);
+    window.scrollTo(0, 0)
   }
   render() {
     const { transition } = this.state;
