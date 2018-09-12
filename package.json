@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3030",
     "prettify": "prettier --write \"**/*.js\" !**/node_modules/** !./node_modules/**  !./.next/"
   },
   "dependencies": {
