@@ -7,7 +7,7 @@ const defaultOGImage = "";
 
 const Head = props => (
   <NextHead>
-    <meta charset="UTF-8" />
+    <meta charSet="UTF-8" />
     <title>{props.title || ""}</title>
     <meta
       name="description"
@@ -26,10 +26,14 @@ const Head = props => (
     />
     <meta name="twitter:site" content={props.url || defaultOGURL} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content={props.ogImage || defaultOGImage} />
-    <meta property="og:image" content={props.ogImage || defaultOGImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122463118-1"></script>
+    <script dangerouslySetInnerHTML={{__html:`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+    
+          gtag('config', 'UA-122463118-1');
+    `}} />
   </NextHead>
 );
 

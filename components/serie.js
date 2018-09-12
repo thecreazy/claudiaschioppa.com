@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Parallax } from "react-scroll-parallax";
+import { isMobile } from 'react-device-detect';
 
 import { string, array } from "prop-types";
 import Router from "next/router";
@@ -55,30 +56,30 @@ class Serie extends Component {
             {name}
           </h3>
           <div className="serie__images">
-            <Parallax offsetYMax={35} offsetYMin={-35}>
+            <Parallax offsetYMax={!isMobile ? 35 : undefined} offsetYMin={!isMobile ? -35 : undefined}>
               <div className="serie__primary">
                 <img
                   className="serie__image"
-                  src={this.formatUrl(firstImmage.image.secure_url)}
-                  alt={firstImmage.name}
+                  src={this.formatUrl(firstImmage ? firstImmage.image.secure_url : '')}
+                  alt={secondImmage.name}
                 />
               </div>
             </Parallax>
-            <Parallax offsetYMax={55} offsetYMin={-55}>
+            <Parallax offsetYMax={!isMobile ? 55 : undefined} offsetYMin={!isMobile ? -55 : undefined}>
               <div className="serie__secondary">
                 <div className="animate serie__image" data-background={color}>
                   <img
                     className="serie__image --left"
-                    src={this.formatUrl(secondImmage.image.secure_url)}
+                    src={this.formatUrl(secondImmage ? secondImmage.image.secure_url: '')}
                     alt={firstImmage.name}
                   />
                 </div>
                 <div className="animate serie__image" data-background={color}>
-                  <img
+                  {thirdImmage && <img
                     className="serie__image --left"
-                    src={this.formatUrl(thirdImmage.image.secure_url)}
-                    alt={firstImmage.name}
-                  />
+                    src={this.formatUrl(thirdImmage ? thirdImmage.image.secure_url : '')}
+                    alt={secondImmage.name}
+                  />}
                 </div>
               </div>
             </Parallax>

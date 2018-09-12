@@ -35,4 +35,15 @@
             background-color: $white;
         }
     }
+    @media #{$small-and-down}{
+        width: 100%;
+        padding: 0px;
+        .title{
+            font-size: 4.00rem;
+        }
+        .contact{
+            display: block;
+            text-align: center;
+        }
+    }
 }

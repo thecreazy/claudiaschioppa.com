@@ -5,7 +5,6 @@ import { ParallaxProvider } from "react-scroll-parallax";
 
 import Head from "../components/head";
 import Serie from "../components/serie";
-import Sketch from "../components/sketch";
 
 import strings from "../locales/en.json";
 
@@ -13,12 +12,12 @@ import '../style/index.scss'
 
 const Index = ({ series }) => (
   <div>
-    <Head title="Home" />
-    <Sketch />
+    <Head title="Claudia Schioppa - Home" />
     <div className="hero">
       <h1 className="title">{strings.title}</h1>
       <h2 className="description">{strings.description}</h2>
-      <p>{strings.contact} </p>
+      <h3 className="description">I’m graduated in Painting to <a href="http://www.accademiabelleartiroma.it/intro.aspx" target="_blank">Academy of Fine Arts in Rome</a> and I recently attended the the <a href="https://www.idea-academy.it/illustration-360" target="_blank">Illustration 360’s Master class to Idea Academy</a>. For any question, proposal or simply to know us, please, mail me at: claudiaschioppa@gmail.com</h3>
+      <p>You are Welcome! {strings.contact} </p>
       <a className="contact" href={strings.cta}>
         {strings.ctalabel}
       </a>

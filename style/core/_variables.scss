@@ -3,3 +3,23 @@ $secondary:         #ce4841;
 $white:             #ffffff;
 
 $borderImage:        "https://res.cloudinary.com/dgv71mms7/image/upload/v1530825657/border.png";   
+
+$small-screen-down:         411px !default
+$medium-screen-down:        768px !default
+$big-screen-down:           980px !default
+$huge-screen-down:          1280px !default
+
+$small-screen:              414px !default;
+$medium-screen:             769px !default;
+$big-screen:                981px !default;
+$huge-screen:               1281px !default;
+
+$small-and-down:            "only screen and (max-width : #{$small-screen-down})" !default;
+$medium-and-down:           "only screen and (max-width : #{$medium-screen-down})" !default;
+$medium-only:               "only screen and (min-width : #{$small-screen}) and (max-width : #{$medium-screen-down})" !default;
+$medium-and-up:             "only screen and (min-width : #{$medium-screen})" !default;
+$big-and-down:              "only screen and (max-width : #{$big-screen-down})" !default;
+$big-only:                  "only screen and (min-width : #{$medium-screen}) and (max-width : #{$big-screen-down})" !default;
+$big-and-up:                "only screen and (min-width : #{$big-screen})" !default;
+$huge-and-down:             "only screen and (max-width : #{$huge-screen-down})" !default;
+$huge-and-up:               "only screen and (min-width : #{$huge-screen})" !default;

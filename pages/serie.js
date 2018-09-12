@@ -4,8 +4,10 @@ import Head from "../components/head";
 import Transition from "../components/transition";
 
 export default class Serie extends Component {
-  static getInitialProps({ query, slug }) {
-    return { query, slug };
+  static async getInitialProps({ query }) {
+    const res = await fetch(`https://cms.claudiaschioppa.com/api/series/${query.slug}`);
+    const json = await res.json();
+    return { query, serie : json };
   }
   constructor(props) {
     super(props);
@@ -18,32 +20,20 @@ export default class Serie extends Component {
   }
   render() {
     const { transition } = this.state;
-    const { query } = this.props;
+    const { query, serie } = this.props;
     return (
-      <div>
-        <Head title="Serie" />
-        <Transition status={transition} color={`#${query.color}`} />
-
-        <style jsx>{`
-         }
-       `}</style>
-        <style jsx global>
-          {`
-            body {
-              border: 25px solid #000000;
-              border-top: 0px;
-              border-width: 0 25px;
-              border-image: url(https://res.cloudinary.com/dgv71mms7/image/upload/v1530825657/border.png)
-                30 round;
-              padding: 20px;
-              margin: 0px;
-              min-height: 99vh;
-              font-family: -apple-system, system-ui, BlinkMacSystemFont,
-                Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue,
-                sans-serif;
-            }
-          `}
-        </style>
+      <div className="singleserie">
+        <Head title={`Serie - ${serie.name}`}/>
+        <div className="singleserie_info">
+          <Transition status={transition} color={`#${query.color}`} />
+          <h1 style={{
+                color: `${serie.color}`
+              }}>{serie.name}</h1>
+          <div id="description" dangerouslySetInnerHTML={{__html: serie.description}} />
+        </div>
+        <div className="masonry">
+            {serie.images.map((ig, i) => <img key={i} title={ig.name} src={ig.image.secure_url} /> )}
+        </div>
       </div>
     );
   }
