@@ -7,6 +7,9 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 const handler = routes.getRequestHandler(app);
 
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
+
 app.prepare().then(() => {
   const server = express();
   server.use(handler);

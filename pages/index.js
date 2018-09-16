@@ -24,7 +24,7 @@ const Index = ({ series }) => {
   }, [])
   return (
   <div className="container">
-    <Head title="Claudia Schioppa - Home" />
+    <Head title="Claudia Schioppa - Home" description={strings.description} />
     <Navbar series={series} />
     <div className="hero">
       <h1 className="title">{strings.title}</h1>

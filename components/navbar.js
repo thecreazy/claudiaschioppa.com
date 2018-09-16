@@ -15,11 +15,11 @@ export default class Navbar extends Component{
                 </div>
                 <ul>
                     <li> 
-                        <Link href={`/`}>
+                        <Link href={`/`} key={0}>
                             <a>Home</a>
                         </Link>
                     </li>
-                    {series && series.map(s => <li key={s.key}> 
+                    {series && series.map(s => <li key={s._id}> 
                         <Link href={`/serie/${s.slug}`}>
                             <a>{s.name} </a>
                         </Link>

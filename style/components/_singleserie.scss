@@ -1,7 +1,7 @@
 .singleserie{
     .singleserie_info{
         display: inline-block;
-        width: 12%;
+        width: 25%;
         padding: 50px 30px;
         position: absolute;
         top: 0px;
@@ -9,12 +9,44 @@
             font-size: 20px;
             font-weight: normal;
         }
+        .__button-container{
+            text-align: right;
+        }
+        .__button{
+            border: none;
+            font-size: 22px;
+            color: $secondary;
+            border: none;
+            font-size: 22px;
+            background: none;
+            cursor: pointer;
+            &:active{
+                color: darken($primary, 10%);
+                outline: none;
+            }
+            &:focus{
+                outline: none; 
+            }
+        }
+    }
+    @media #{$medium-and-down} {
+        .singleserie_info{
+            width: 70%;
+            z-index: 2;
+        }
     }
     @media #{$small-and-down} {
         .singleserie_info{
             display: block;
-            width: 100%;
             position: relative;
+            padding-left: 0%;
+            padding-right: 0%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            .__button-container{
+                display: none
+            }
         }
     }
 }
