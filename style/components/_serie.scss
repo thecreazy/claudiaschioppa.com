@@ -1,13 +1,13 @@
 .serie {
-    column-count: 2;
-    column-gap: 0;
-    counter-reset: item-counter;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -8px;
+    width: 100%;
     cursor: pointer;
     .serie__image {
-        box-sizing: border-box;
-        break-inside: avoid;
-        padding: 0px;
-        counter-increment: item-counter;
+        flex: auto;
+        width: 30%;
+        margin: 0; 
         position: relative;
 
         img {
@@ -41,7 +41,23 @@
             }
         }
     }
+    @media #{$big-and-down} {
+        margin-left: 10%;
+        .serie__image{
+            width: 50%
+        }
+        
+    }
+    @media #{$medium-and-down} {
+        margin-left: 0%;
+        .serie__image{
+            width: 50%
+        }
+        
+    }
     @media #{$small-and-down} {
-        column-count: 1;
+        .serie__image{
+            width: 100%
+        }
     }
 }

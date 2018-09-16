@@ -11,9 +11,9 @@ body {
         display: block;
         .images{
             display: inline-flex;
-            width: 54%;
-            @media #{$big-and-down}{
-                width: 54%;
+            width: 55%;
+            @media #{$big-and-up}{
+                width: 64%;
             }
             @media #{$medium-and-down} {
                 width: 90%;
@@ -24,6 +24,7 @@ body {
         }
     }
 }
+
 
 a {
     color: $secondary;
