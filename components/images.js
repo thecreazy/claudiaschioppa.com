@@ -25,8 +25,10 @@ class Serie extends Component {
     if(e) e.stopPropagation()
     const {currentTarget} = e
     const slug = currentTarget.getAttribute('data-slug')
+    const color = currentTarget.getAttribute('data-color')
     this.setState({
-      transition: 'open'
+      transition: 'open',
+      color
     }, () =>{
         setTimeout(
           () => Router.push(`${BASE_SLUG}${slug}`),
@@ -42,6 +44,7 @@ class Serie extends Component {
         <Transition status={transition} color={color} />
           {images.map((image,k) => <div 
           data-slug={image.info.slug}
+          data-color={image.info.color}
           key={`image-${k}`}
           onClick={this.onClick}
           className="serie__image">
