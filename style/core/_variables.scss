@@ -1,17 +1,19 @@
 $primary:           #000000;
 $secondary:         #ce4841;
 $white:             #ffffff;
+$grey:              #f9f9f9;
+$hoverblack:        rgba(15,15,15,.7);
 
 $borderImage:        "https://res.cloudinary.com/dgv71mms7/image/upload/v1530825657/border.png";   
 
 $small-screen-down:         411px !default
 $medium-screen-down:        768px !default
-$big-screen-down:           980px !default
+$big-screen-down:           1024px !default
 $huge-screen-down:          1280px !default
 
 $small-screen:              414px !default;
 $medium-screen:             769px !default;
-$big-screen:                981px !default;
+$big-screen:                1025px !default;
 $huge-screen:               1281px !default;
 
 $small-and-down:            "only screen and (max-width : #{$small-screen})" !default;

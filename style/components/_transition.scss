@@ -1,16 +1,14 @@
 .transition {
-    width: 1500px;
-    height: 1500px;
-    position: absolute;
-    top: 0%;
-    left: 15%;
-    border-radius: 50%;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    border-radius: 0%;
     transform-origin: center center;
     will-change: transform;
     transform: scale(0.1) translateZ(0) translateY(-50%) translateX(50%);
     opacity: 0;
     &.open {
-        transform: scale(1.5) translateZ(0) translateY(-10%) translateX(-10%);
+        transform: scale(2) translateZ(0) translateY(-10%) translateX(-10%);
         transition: transform 0.3s, width 0.3s, height 0.3s linear;
         z-index: 99;
         opacity: 1;

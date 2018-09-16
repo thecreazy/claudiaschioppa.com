@@ -3,10 +3,15 @@
     padding: 0 1.875rem;
     margin-left: auto;
     margin-right: auto;
+    display: inline-block;
+    width: 40%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    vertical-align: top;
     .title,
     .description {
         text-align: left;
-        pointer-events: none;
     }
     .title {
         font-weight: 800;
@@ -35,9 +40,12 @@
             background-color: $white;
         }
     }
-    @media #{$small-and-down}{
-        width: 100%;
+    @media #{$medium-and-down}{
+        margin-top: 60px;
+        width: 90%;
         padding: 0px;
+        position: relative;
+        display: block;
         .title{
             font-size: 4.00rem;
         }
@@ -45,5 +53,8 @@
             display: block;
             text-align: center;
         }
+    }
+    @media #{$small-and-down}{
+        margin-top:0px;
     }
 }

@@ -1,0 +1,71 @@
+$bar-width: 30px;
+$bar-height: 4px;
+$bar-spacing: 8px;
+
+
+.menuwrapper {
+	position: fixed;
+    top: 20px;
+    left: 30px;
+    margin: auto;
+    width: $bar-width;
+	height: $bar-height + $bar-spacing *2;
+	cursor: pointer;
+	z-index: 99;
+	@media #{$medium-and-down} {
+        left: 5%;
+    }
+	@media #{$small-and-down} {
+		left: auto;
+		right: 5%;
+		top: 2%;
+	}
+}
+
+.menuwrapper-hamburger,
+.menuwrapper-hamburger:after,
+.menuwrapper-hamburger:before {
+  width: $bar-width;
+	height: $bar-height;
+}
+
+.menuwrapper-hamburger {
+	position: relative;
+	transform: translateY($bar-spacing);
+	background: $secondary;
+	transition: all 0ms 300ms;
+  
+  &.animate {
+    background: transparent; 
+  }
+}
+
+.menuwrapper-hamburger:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: $bar-spacing;
+	background: $secondary;
+	transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menuwrapper-hamburger:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: $bar-spacing;
+	background: $secondary;
+	transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menuwrapper-hamburger.animate:after {
+	top: 0;
+	transform: rotate(45deg);
+	transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+.menuwrapper-hamburger.animate:before {
+	bottom: 0;
+	transform: rotate(-45deg);
+	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
