@@ -31,19 +31,19 @@ const Index = ({ series }) => {
       <h2 className="description">{strings.description}</h2>
       <h3 className="description">I’m graduated in Painting to 
         <Link href="http://www.accademiabelleartiroma.it/intro.aspx" >
-          <a target="_blank"> Academy of Fine Arts in Rome</a>
+          <a target="_blank" rel="noopener"> Academy of Fine Arts in Rome</a>
         </Link> and I recently attended the the 
        <Link href="https://www.idea-academy.it/illustration-360">
-        <a target="_blank"> Illustration 360’s Master class to Idea Academy</a>
+        <a target="_blank" rel="noopener"> Illustration 360’s Master class to Idea Academy</a>
       </Link>. 
       For any question, proposal or simply to know us, please, mail me at: claudiaschioppa@gmail.com</h3>
       <p>You are Welcome! {strings.contact} </p>
       <div className="social">
         <Link  href="https://www.facebook.com/Claudia-Schioppa-Drawings-1541198826159073/">
-        <a target="_blank"><i className="icon-facebook"/></a>
+        <a target="_blank" rel="noopener"><i className="icon-facebook"/></a>
         </Link>
         <Link href="https://www.instagram.com/claudiaschioppa" >
-        <a target="_blank"><i className="icon-instagram"/></a>
+        <a target="_blank" rel="noopener"><i className="icon-instagram"/></a>
         </Link>
        
       </div>
