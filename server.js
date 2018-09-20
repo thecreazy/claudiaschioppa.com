@@ -16,6 +16,9 @@ app.prepare().then(() => {
 
   server.use('/manifest.json', (_, res) => res.sendFile('manifest.json', { root: path.join(__dirname, 'static') }));
 
+  server.use('/sitemap.xml', (_, res) => res.sendFile('sitemap.xml', { root: path.join(__dirname, 'static') }));
+
+
 
   server.use(handler);
 
