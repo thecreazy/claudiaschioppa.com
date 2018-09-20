@@ -28,6 +28,8 @@ const Head = props => (
     <meta name="twitter:image" content={props.ogImage || defaultOGImage} />
     <meta name="twitter:site" content={props.url || defaultOGURL} />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" href="/static/manifest.json" />
+    <meta name="theme-color" content="#ce4841" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122463118-1"></script>
     <script dangerouslySetInnerHTML={{__html:`
           window.dataLayer = window.dataLayer || [];

@@ -13,7 +13,7 @@ require('isomorphic-fetch');
 app.prepare().then(() => {
   const server = express();
   server.use(handler);
-
+  
   server.get("*", (req, res) => {
     return handle(req, res);
   });
