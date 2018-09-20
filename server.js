@@ -18,6 +18,8 @@ app.prepare().then(() => {
 
   server.use('/sitemap.xml', (_, res) => res.sendFile('sitemap.xml', { root: path.join(__dirname, 'static') }));
 
+  server.use('/robots.txt', (_, res) => res.sendFile('robots.txt', { root: path.join(__dirname, 'static') }));
+
 
 
   server.use(handler);
