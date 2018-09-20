@@ -14,8 +14,8 @@ const Head = props => (
       content={props.description || defaultDescription}
     />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-    <link rel="icon" sizes="192x192" href="/static/imgs/icons/icon-152x152.png" />
-    <link rel="apple-touch-icon" href="/static/imgs/icons/icon-152x152.png" />
+    <link rel="icon" sizes="192x192" href="/static/imgs/icons/icon-touch.png" />
+    <link rel="apple-touch-icon" href="/static/imgs/icons/icon-touch.png" />
     <link rel="icon" href="/static/favicon.ico" />
     <meta property="og:url" content={props.url || defaultOGURL} />
     <meta property="og:title" content={props.title || ""} />
