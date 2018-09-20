@@ -1,6 +1,7 @@
 const express = require("express");
 const next = require("next");
 const routes = require("./routes");
+const path = require('path')
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
@@ -12,8 +13,12 @@ require('isomorphic-fetch');
 
 app.prepare().then(() => {
   const server = express();
+
+  server.use('/manifest.json', (_, res) => res.sendFile('manifest.json', { root: path.join(__dirname, 'static') }));
+
+
   server.use(handler);
-  
+
   server.get("*", (req, res) => {
     return handle(req, res);
   });
