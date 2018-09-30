@@ -25,6 +25,9 @@ $easing: ease-in-out;
         &:before{
             position: absolute;
             content: '';
+            background: url('/static/imgs/me.png');
+            background-size: contain;
+            background-repeat: no-repeat;
             width: 200px;
             height: 200px;
             right: 0;
@@ -55,7 +58,12 @@ $easing: ease-in-out;
     @media #{$big-and-down}{
         margin-top: 40px;
         .title{
-            font-size: 5.25rem;
+            font-size: 4.00rem;
+            &:before{
+                width: 150px;
+                height: 150px;
+                margin-top: -50%;
+            }
         }
     }
     @media #{$medium-and-down}{
@@ -66,6 +74,9 @@ $easing: ease-in-out;
         display: block;
         .title{
             font-size: 4.00rem;
+            &:before{
+                margin-top: -20%;
+            }
         }
         .contact{
             display: block;
@@ -74,5 +85,12 @@ $easing: ease-in-out;
     }
     @media #{$small-and-down}{
         margin-top:0px;
+        .title{
+            margin-top: 200px;
+            &:before{
+                top: 0;
+                margin-top: -45%;
+            }
+        }
     }
 }
