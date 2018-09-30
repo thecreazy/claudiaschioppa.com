@@ -45,6 +45,9 @@ const Index = ({ series }) => {
         <Link href="https://www.instagram.com/claudiaschioppa" >
         <a target="_blank" rel="noopener"><i className="icon-instagram"/></a>
         </Link>
+        <Link href="https://www.behance.net/claudiasch5616" >
+        <a target="_blank" rel="noopener"><i className="icon-behance"/></a>
+        </Link>
        
       </div>
       <a className="contact" href={strings.cta}>

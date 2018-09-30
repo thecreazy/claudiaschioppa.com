@@ -12,6 +12,9 @@
         transition: transform 0.3s, width 0.3s, height 0.3s linear;
         z-index: 99;
         opacity: 1;
+        &.--inner{
+            transform: scale(2) translateZ(0) translateY(-50%) translateX(-10%);
+        }
     }
     &.close {
         height: 0;

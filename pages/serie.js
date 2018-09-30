@@ -5,6 +5,7 @@ import Swiper from 'react-id-swiper';
 import Head from '../components/head';
 import Transition from "../components/transition";
 import Navbar from '../components/navbar'
+import Images from '../components/images'
 
 export default class Serie extends Component {
   static async getInitialProps({ query }) {
@@ -61,12 +62,23 @@ export default class Serie extends Component {
         disableOnInteraction: false,
       }
     }
-    
+
+    const images = series.reduce((total, element)=>{
+      element.images.forEach(img => {
+        img.info = {
+          color: element.color,
+          slug: element.slug,
+          name: element.name
+        }
+      })
+      if(element.slug !== serie.slug) return [...total, ...element.images]
+      return total
+    }, [])
 
     return (
       <div className="singleserie">
-      <Navbar series={series} />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.css" />
+        <Navbar series={series} />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.css" />
         <Head title={`Serie - ${serie.name}`} description={serie.description} />
         <div className="singleserie_info">
           <Transition status={transition} color={`${serie.color}`} />
@@ -89,7 +101,12 @@ export default class Serie extends Component {
                 <img  title={ig.name} src={this.formatUrl(ig.image.secure_url)} /> 
           </div>)}
         </div>
+        <div className="singleserie_images">
+          <h4>Other projects</h4>
+          <Images inner images={images} />
+        </div>
       </div>
+      
     );
   }
 }

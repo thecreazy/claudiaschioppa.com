@@ -29,6 +29,15 @@
             }
         }
     }
+    .singleserie_images{
+        position: relative;
+        top: 100vh;
+        padding: 100px 30px;
+        padding-bottom: 0px;
+        .serie{
+            margin: 0px;
+        }
+    }
     @media #{$medium-and-down} {
         .singleserie_info{
             width: 70%;
@@ -47,6 +56,12 @@
             .__button-container{
                 display: none
             }
+        }
+        .singleserie_images{
+            padding: 0px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

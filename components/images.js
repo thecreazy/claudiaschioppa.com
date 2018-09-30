@@ -37,11 +37,11 @@ class Serie extends Component {
     })
   }
   render() {
-    const { images = [] } = this.props;
+    const { images = [], inner } = this.props;
     const { transition, color } = this.state;
     return (
         <section className="serie">
-        <Transition status={transition} color={color} />
+        <Transition status={transition} color={color} inner={inner} />
           {images.map((image,k) => <div 
           data-slug={image.info.slug}
           data-color={image.info.color}

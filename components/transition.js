@@ -1,6 +1,6 @@
-export default ({ status, color }) => (
+export default ({ status, color, inner }) => (
   <div
-    className={`transition ${status}`}
+    className={`transition ${status} ${inner ? '--inner': ''}`}
     style={{
       backgroundColor: color
     }}
