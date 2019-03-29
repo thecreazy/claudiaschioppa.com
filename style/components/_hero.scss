@@ -17,11 +17,13 @@ $easing: ease-in-out;
     }
     .title {
         font-weight: 800;
-        letter-spacing: 0.25rem;
+        letter-spacing: 0.10rem;
         font-size: 4.25rem;
         color: $secondary;
         position: relative;
         margin-top: 150px;
+        line-height: 4rem;
+        font-family: Avenir, Arial, Helvetica, sans-serif;
         &:before{
             position: absolute;
             content: '';
