@@ -25,13 +25,13 @@ $easing: ease-in-out;
         &:before{
             position: absolute;
             content: '';
-            background: url('/static/imgs/me.png');
+            background: url('/static/imgs/me.jpg');
             background-size: contain;
             background-repeat: no-repeat;
             width: 200px;
             height: 200px;
             right: 0;
-            margin-top: -30%;
+            margin-top: -20%;
         }
     }
     .description {
